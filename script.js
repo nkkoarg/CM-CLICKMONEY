@@ -1,6 +1,6 @@
 document.getElementById('generateLinkBtn').addEventListener('click', function() {
     // Link de ejemplo para acortar
-    let originalLink = "https://www.example.com";
+    let originalLink = "https://nkkoarg.github.io/CM-CLICKMONEY/";
 
     // Hacer la solicitud a la API de Cuty.io (esto es un ejemplo; necesitarás una API key de Cuty.io)
     fetch(`https://cuty.io/api/v1/shorten?url=${encodeURIComponent(originalLink)}`, {
