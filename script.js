@@ -1,6 +1,6 @@
 // Asegúrate de que Firebase ya esté configurado en firebase-config.js
+// Si es necesario, importa las funciones de Firebase en este archivo:
 
-// Espera a que el DOM se cargue completamente antes de ejecutar el código
 document.addEventListener("DOMContentLoaded", () => {
     const clickButton = document.getElementById("click-button");
     const clickCount = document.getElementById("click-count");
@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Firebase: Cargar y mostrar el ranking
     const loadLeaderboard = () => {
         // Se obtiene la referencia a la base de datos
+        const leaderboardRef = ref(database, 'leaderboard');  // Definir la referencia de la base de datos
         onValue(leaderboardRef, (snapshot) => {
             leaderboardList.innerHTML = ''; // Limpia la lista actual antes de cargar los nuevos datos
             const data = snapshot.val(); // Datos de la base de datos

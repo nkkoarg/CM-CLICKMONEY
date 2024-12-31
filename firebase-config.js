@@ -1,8 +1,8 @@
-// Importar Firebase
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js";
-import { getDatabase, ref, set, onValue } from "https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js";
+// Importa Firebase desde el CDN o desde un módulo de Firebase
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js';
+import { getDatabase, ref, set, onValue } from 'https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js';
 
-// Configuración de Firebase (rellena con tus datos)
+// Configuración de Firebase
 const firebaseConfig = {
   apiKey: "AIzaSyB2J3X2lIxa55BQv5z0D8RcyrbIU40IFRs",
   authDomain: "clicksap.firebaseapp.com",
@@ -16,13 +16,6 @@ const firebaseConfig = {
 
 // Inicializa Firebase
 const app = initializeApp(firebaseConfig);
+
+// Obtén la base de datos
 const database = getDatabase(app);
-
-// Referencia al ranking mundial
-const leaderboardRef = ref(database, 'leaderboard');
-
-// Función para guardar la puntuación en el ranking
-const saveScore = (name, score) => {
-    const playerRef = ref(database, `leaderboard/${name}`);
-    set(playerRef, { name, score });
-};
