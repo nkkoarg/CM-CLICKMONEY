@@ -17,7 +17,7 @@ document.getElementById('generateLinkBtn').addEventListener('click', function() 
     .then(data => {
         if (data.short_url) {
             // Mostrar el enlace acortado en la página
-            document.getElementById('shortenedLink').innerHTML = `Enlace Acortado: <a href="${data.short_url}" target="_blank">${data.short_url}</a>`;
+            document.getElementById('https://cuty.io/WwPvMvEZvG').innerHTML = `Enlace Acortado: <a href="${data.short_url}" target="_blank">${data.short_url}</a>`;
             
             // Redirigir a la página inicial después de un corto retraso
             setTimeout(() => {
