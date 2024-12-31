@@ -4,7 +4,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const clickButton = document.getElementById("click-button");
     const clickCount = document.getElementById("click-count");
-    const leaderboardList = document.getElementById("leaderboard-list");
+    const leaderboardList = document.getElementById("leaderboard");
 
     let count = 0;
 
